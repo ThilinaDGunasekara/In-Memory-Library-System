@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anpHome" prefHeight="447.0" prefWidth="729.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ManageBook">
+   <children>
+      <ImageView fx:id="picIssueBook" fitHeight="59.0" fitWidth="59.0" layoutX="30.0" layoutY="152.0" onMouseClicked="#issueBook_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/7dda385ed3724fea700d45a0349d9e77.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picManageReturn" fitHeight="60.0" fitWidth="59.0" layoutX="32.0" layoutY="224.0" onMouseClicked="#handleReturns_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/bms-bookreturns.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picManageBook" fitHeight="59.0" fitWidth="59.0" layoutX="30.0" layoutY="298.0" onMouseClicked="#ManageBook_Clicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/office-stuff-book-remind-dairy-work-manage-1-29217.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picManageMembers" fitHeight="60.0" fitWidth="59.0" layoutX="30.0" layoutY="81.0" onMouseClicked="#manageCustomer_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/a6e073779c.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picHome" fitHeight="66.0" fitWidth="60.0" layoutX="29.0" layoutY="9.0" onMouseClicked="#home_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/home-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picSearch" fitHeight="59.0" fitWidth="60.0" layoutX="29.0" layoutY="374.0" onMouseClicked="#searchBook_clicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/18-512.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="246.0" layoutY="169.0" prefHeight="41.0" prefWidth="237.0" textFill="#00fffb">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" contentDisplay="CENTER" layoutX="170.0" layoutY="209.0" prefHeight="30.0" prefWidth="390.0" text="Please select one of above main operations to proceed" textFill="#aaabab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="125.0" prefHeight="447.0" prefWidth="614.0" style="-fx-background-color: #aaabab;">
+         <children>
+            <Label fx:id="lblDescription1" alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="28.0" prefHeight="41.0" prefWidth="220.0" text="Manage Book">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtBook_ID" focusColor="BLACK" labelFloat="true" layoutX="18.0" layoutY="137.0" onAction="#txtBook_OnAction" prefHeight="28.0" prefWidth="213.0" promptText="BOOK ID :" unFocusColor="#00fffb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtTitle_id" focusColor="BLACK" labelFloat="true" layoutX="18.0" layoutY="204.0" prefHeight="28.0" prefWidth="213.0" promptText="TITLE :" unFocusColor="#00fffb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAuthor_Id" focusColor="BLACK" labelFloat="true" layoutX="18.0" layoutY="279.0" prefHeight="28.0" prefWidth="213.0" promptText="AUTHOR :" unFocusColor="#00fffb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnSave_Id" buttonType="RAISED" layoutX="14.0" layoutY="374.0" onAction="#btnSave_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="44.0" prefWidth="79.0" style="-fx-background-color: #02daef;" text="Save" textFill="#000000cf" />
+            <JFXButton fx:id="btnDelete_Id" buttonType="RAISED" layoutX="148.0" layoutY="374.0" onAction="#btnDelete_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="44.0" prefWidth="79.0" style="-fx-background-color: #02daef;" text="Delete" textFill="#000000cf" />
+            <TableView fx:id="tblList_Id" layoutX="249.0" layoutY="122.0" onMouseClicked="#tblClick" prefHeight="239.0" prefWidth="351.0">
+               <columns>
+                  <TableColumn prefWidth="85.0" style="-fx-background-color: #b6b9ba; -fx-alignment: CENTER;" text="BOOK ID" />
+                  <TableColumn minWidth="0.0" prefWidth="115.0" style="-fx-background-color: #b6b9ba; -fx-alignment: CENTER;" text="TITLE" />
+                  <TableColumn prefWidth="158.0" style="-fx-background-color: #b6b9ba; -fx-alignment: CENTER;" text="AUTHOR" />
+               </columns>
+            </TableView>
+            <ImageView fx:id="picNewBook" fitHeight="77.0" fitWidth="79.0" layoutX="55.0" layoutY="14.0" onMouseClicked="#newBook_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icon/623443_book_256x256.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="241.0" prefHeight="41.0" prefWidth="244.0" textAlignment="CENTER" textFill="#bf0505" wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAuthor" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="314.0" prefHeight="41.0" prefWidth="244.0" textAlignment="CENTER" textFill="#bf0505" wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnDelete_Id1" buttonType="RAISED" layoutX="365.0" layoutY="374.0" onAction="#btnDelete_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="44.0" prefWidth="105.0" style="-fx-background-color: #02daef;" text="Book Report" textFill="#000000cf" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

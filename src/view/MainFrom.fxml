@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anpHome" prefHeight="447.0" prefWidth="729.0" style="-fx-background-color: #484949;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainFromController">
+   <children>
+      <ImageView fx:id="picIssueBook" fitHeight="121.0" fitWidth="126.0" layoutX="99.0" layoutY="257.0" onMouseClicked="#issueBook_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/7dda385ed3724fea700d45a0349d9e77.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picManageReturn" fitHeight="121.0" fitWidth="126.0" layoutX="310.0" layoutY="294.0" onMouseClicked="#handleReturns_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/bms-bookreturns.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picManageBook" fitHeight="121.0" fitWidth="126.0" layoutX="475.0" layoutY="257.0" onMouseClicked="#ManageBook_Clicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/office-stuff-book-remind-dairy-work-manage-1-29217.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picManageMembers" fitHeight="121.0" fitWidth="126.0" layoutX="38.0" layoutY="108.0" onMouseClicked="#manageCustomer_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/a6e073779c.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="121.0" fitWidth="126.0" layoutX="304.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/home-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picSearch" fitHeight="121.0" fitWidth="126.0" layoutX="562.0" layoutY="108.0" onMouseClicked="#searchBook_clicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/18-512.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="246.0" layoutY="169.0" prefHeight="41.0" prefWidth="237.0" textFill="#00fffb">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" contentDisplay="CENTER" layoutX="170.0" layoutY="209.0" prefHeight="30.0" prefWidth="390.0" text="Please select one of above main operations to proceed" textFill="#00fffb">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

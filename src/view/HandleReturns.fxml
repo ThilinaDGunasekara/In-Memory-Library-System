@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anpHome" prefHeight="447.0" prefWidth="729.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HandleReturns">
+   <children>
+      <ImageView fx:id="picIssueBook" fitHeight="59.0" fitWidth="59.0" layoutX="30.0" layoutY="151.0" onMouseClicked="#issueBook_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/7dda385ed3724fea700d45a0349d9e77.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picManageReturn" fitHeight="60.0" fitWidth="59.0" layoutX="34.0" layoutY="224.0" onMouseClicked="#handleReturns_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/bms-bookreturns.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picManageBook" fitHeight="59.0" fitWidth="59.0" layoutX="31.0" layoutY="301.0" onMouseClicked="#ManageBook_Clicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/office-stuff-book-remind-dairy-work-manage-1-29217.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picManageMembers" fitHeight="60.0" fitWidth="59.0" layoutX="31.0" layoutY="81.0" onMouseClicked="#manageCustomer_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/a6e073779c.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picHome" fitHeight="66.0" fitWidth="60.0" layoutX="30.0" layoutY="9.0" onMouseClicked="#home_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/home-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="picSearch" fitHeight="59.0" fitWidth="60.0" layoutX="31.0" layoutY="374.0" onMouseClicked="#searchBook_clicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/18-512.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="246.0" layoutY="169.0" prefHeight="41.0" prefWidth="237.0" textFill="#00fffb">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="126.0" prefHeight="447.0" prefWidth="629.0" style="-fx-background-color: #aaabab;">
+         <children>
+            <Label fx:id="lblDescription1" alignment="CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="22.0" prefHeight="41.0" prefWidth="220.0" text="Return Book">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtIssueDate_id" focusColor="BLACK" labelFloat="true" layoutX="24.0" layoutY="153.0" onAction="#txtIssueDate_OnAction" prefHeight="28.0" prefWidth="160.0" promptText="ISSUE DATE :" unFocusColor="#00fffb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnIssue_Id" buttonType="RAISED" contentDisplay="CENTER" layoutX="256.0" layoutY="232.0" onAction="#btnIssue_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="41.0" prefWidth="77.0" style="-fx-background-color: #02daef;" text="Return" textFill="#000000cf">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tblList_Id" layoutX="21.0" layoutY="292.0" onMouseClicked="#tblClick" prefHeight="141.0" prefWidth="572.0">
+               <columns>
+                  <TableColumn prefWidth="73.0" style="-fx-background-color: #b6b9ba; -fx-alignment: CENTER;" text="ISSUE ID" />
+                  <TableColumn prefWidth="81.0" style="-fx-background-color: #b6b9ba; -fx-alignment: CENTER;" text="BOOK ID" />
+                  <TableColumn prefWidth="108.0" style="-fx-background-color: #b6b9ba; -fx-alignment: CENTER;" text="ISSUE DATE" />
+                  <TableColumn prefWidth="118.0" style="-fx-background-color: #b6b9ba; -fx-alignment: CENTER;" text="MUST RETURN" />
+                  <TableColumn prefWidth="114.0" style="-fx-background-color: #b6b9ba; -fx-alignment: CENTER;" text="RETURN DATE" />
+                  <TableColumn prefWidth="76.0" style="-fx-background-color: #b6b9ba; -fx-alignment: CENTER_LEFT;" text="FINE" />
+               </columns>
+            </TableView>
+            <ImageView fx:id="picNewReturnBook" fitHeight="77.0" fitWidth="79.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#newReBook_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icon/623443_book_256x256.png" />
+               </image>
+            </ImageView>
+            <JFXComboBox fx:id="cmbIssue_id" focusColor="BLACK" labelFloat="true" layoutX="123.0" layoutY="91.0" onAction="#cmbIssue_OnAction" prefHeight="28.0" prefWidth="160.0" promptText="ISSUE ID :" unFocusColor="#00fffb" />
+            <JFXTextField fx:id="txtMustReturnDate_id" focusColor="BLACK" labelFloat="true" layoutX="227.0" layoutY="153.0" onAction="#txtIssueDate_OnAction" prefHeight="28.0" prefWidth="160.0" promptText="MUST RETURN :" unFocusColor="#00fffb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXDatePicker fx:id="returnDatePicker" defaultColor="#02daef" layoutX="431.0" layoutY="153.0" onAction="#returnDatePicker_OnAction" prefHeight="28.0" prefWidth="160.0" promptText="RETURN DATE :" />
+            <JFXTextField fx:id="txtFine_id" focusColor="BLACK" labelFloat="true" layoutX="423.0" layoutY="238.0" prefHeight="28.0" prefWidth="160.0" promptText="FINE :" unFocusColor="#00fffb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtBook_Id" focusColor="BLACK" labelFloat="true" layoutX="343.0" layoutY="90.0" onAction="#txtBook_OnAction" prefHeight="28.0" prefWidth="160.0" promptText="BOOK ID :" unFocusColor="#00fffb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
