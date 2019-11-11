@@ -1,3 +1,3 @@
-# This is in memory library management system
+# This is a library management system..
 
 [LICENSE](LICENSE)
